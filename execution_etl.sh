@@ -11,15 +11,15 @@ PROJECT_ROOT=$(dirname "$0")
 SCRIPT_DIR="$PROJECT_ROOT/ETL_scripts"
 REQUIREMENTS_FILE="$PROJECT_ROOT/requirements.txt"
 
-export HOST=""
-export USERNAME=""
-export PASSWORD=""
-export DATABASE=""
+export HOST="localhost"
+export USERNAME="root"
+export PASSWORD="Sopas_de_aj8!"
+export DATABASE="Mira_Transfermarkt"
 
 # Step 1: Create a virtual environment
-if [ ! -d "$PROJECT_ROOT/.venv" ]; then
-    python3 -m venv "$PROJECT_ROOT/.venv"
-fi
+# if [ ! -d "$PROJECT_ROOT/.venv" ]; then
+python3 -m venv "$PROJECT_ROOT/.venv"
+# fi
 
 # Step 2: Activate the virtual environment
 source "$PROJECT_ROOT/.venv/bin/activate"

@@ -28,3 +28,31 @@
 2024-12-30 18:10:20,220 - INFO - 0 records inserted successfully in market values table.
 2024-12-30 18:10:20,221 - INFO - 0 records inserted successfully in injuries table.
 2024-12-30 18:10:20,221 - INFO - All data inserted successfully, transaction committed.
+2024-12-30 19:25:16,526 - INFO - Connected to MySQL server
+2024-12-30 19:25:16,532 - INFO - Database 'Mira_Transfermarkt' created or already exists.
+2024-12-30 19:25:16,606 - INFO - Table 'teams_table' created successfully.
+2024-12-30 19:25:16,610 - INFO - Table 'transfers_table' created successfully.
+2024-12-30 19:25:16,614 - INFO - Table 'players_table' created successfully.
+2024-12-30 19:25:16,617 - INFO - Table 'market_values_table' created successfully.
+2024-12-30 19:25:16,620 - INFO - Table 'injuries table' created successfully.
+2024-12-30 19:25:16,620 - INFO - All tables created successfully, transaction committed.
+2024-12-30 19:26:32,893 - INFO - 0 records inserted successfully in teams table.
+2024-12-30 19:26:32,907 - INFO - 0 records inserted successfully in transfers table.
+2024-12-30 19:26:32,911 - INFO - 0 records inserted successfully in players table.
+2024-12-30 19:26:32,917 - INFO - 0 records inserted successfully in market values table.
+2024-12-30 19:26:32,919 - INFO - 0 records inserted successfully in injuries table.
+2024-12-30 19:26:32,919 - INFO - All data inserted successfully, transaction committed.
+2024-12-30 19:30:02,106 - INFO - Connected to MySQL server
+2024-12-30 19:30:02,109 - INFO - Database 'Mira_Transfermarkt' created or already exists.
+2024-12-30 19:30:02,185 - INFO - Table 'teams_table' created successfully.
+2024-12-30 19:30:02,189 - INFO - Table 'transfers_table' created successfully.
+2024-12-30 19:30:02,193 - INFO - Table 'players_table' created successfully.
+2024-12-30 19:30:02,196 - INFO - Table 'market_values_table' created successfully.
+2024-12-30 19:30:02,199 - INFO - Table 'injuries table' created successfully.
+2024-12-30 19:30:02,199 - INFO - All tables created successfully, transaction committed.
+2024-12-30 19:30:59,960 - INFO - 0 records inserted successfully in teams table.
+2024-12-30 19:30:59,972 - INFO - 0 records inserted successfully in transfers table.
+2024-12-30 19:30:59,976 - INFO - 0 records inserted successfully in players table.
+2024-12-30 19:30:59,981 - INFO - 0 records inserted successfully in market values table.
+2024-12-30 19:30:59,983 - INFO - 0 records inserted successfully in injuries table.
+2024-12-30 19:30:59,983 - INFO - All data inserted successfully, transaction committed.
