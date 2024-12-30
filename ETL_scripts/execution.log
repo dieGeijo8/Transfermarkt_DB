@@ -1,0 +1,30 @@
+2024-12-30 16:38:00,986 - INFO - Connected to MySQL server
+2024-12-30 16:38:00,993 - INFO - Database 'Mira_Transfermarkt' created or already exists.
+2024-12-30 16:38:01,104 - INFO - Table 'teams_table' created successfully.
+2024-12-30 16:38:01,140 - INFO - Table 'transfers_table' created successfully.
+2024-12-30 16:38:01,170 - INFO - Table 'players_table' created successfully.
+2024-12-30 16:38:01,200 - INFO - Table 'market_values_table' created successfully.
+2024-12-30 16:38:01,229 - INFO - Table 'injuries table' created successfully.
+2024-12-30 16:38:01,229 - INFO - All tables created successfully, transaction committed.
+2024-12-30 16:39:20,286 - INFO - 20 records inserted successfully in teams table.
+2024-12-30 16:39:20,350 - INFO - 1241 records inserted successfully in transfers table.
+2024-12-30 16:39:20,376 - INFO - 829 records inserted successfully in players table.
+2024-12-30 16:39:20,401 - INFO - 829 records inserted successfully in market values table.
+2024-12-30 16:39:20,407 - INFO - 17 records inserted successfully in injuries table.
+2024-12-30 16:39:20,407 - INFO - All data inserted successfully, transaction committed.
+2024-12-30 18:07:40,644 - ERROR - Error creating the Database: 1045 (28000): Access denied for user 'your_username'@'localhost' (using password: YES)
+2024-12-30 18:07:40,710 - ERROR - Error in the connection with the DB: 1045 (28000): Access denied for user 'your_username'@'localhost' (using password: YES)
+2024-12-30 18:08:55,809 - INFO - Connected to MySQL server
+2024-12-30 18:08:55,816 - INFO - Database 'Mira_Transfermarkt' created or already exists.
+2024-12-30 18:08:55,892 - INFO - Table 'teams_table' created successfully.
+2024-12-30 18:08:55,896 - INFO - Table 'transfers_table' created successfully.
+2024-12-30 18:08:55,900 - INFO - Table 'players_table' created successfully.
+2024-12-30 18:08:55,904 - INFO - Table 'market_values_table' created successfully.
+2024-12-30 18:08:55,907 - INFO - Table 'injuries table' created successfully.
+2024-12-30 18:08:55,907 - INFO - All tables created successfully, transaction committed.
+2024-12-30 18:10:20,198 - INFO - 0 records inserted successfully in teams table.
+2024-12-30 18:10:20,210 - INFO - 0 records inserted successfully in transfers table.
+2024-12-30 18:10:20,214 - INFO - 0 records inserted successfully in players table.
+2024-12-30 18:10:20,220 - INFO - 0 records inserted successfully in market values table.
+2024-12-30 18:10:20,221 - INFO - 0 records inserted successfully in injuries table.
+2024-12-30 18:10:20,221 - INFO - All data inserted successfully, transaction committed.
