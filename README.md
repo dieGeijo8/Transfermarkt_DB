@@ -1,7 +1,8 @@
 # Mira_Transfermarkt_WSL
 
 This project has been developed using the Windows Subsystem for Linux (WSL).  
-To run this project, ensure that MySQL is installed on your system.  
+To run this project, make sure that Python 3.x is installed on your system 
+and that MySQL is installed and running on the default port (3306).
 
 The `execution_etl.sh` Bash script will:  
 1. Set up the required virtual environment and install dependencies.  
