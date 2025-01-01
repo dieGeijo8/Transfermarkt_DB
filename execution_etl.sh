@@ -1,37 +1,35 @@
 #!/bin/bash
 
-# Exit immediately if a command exits with a non-zero status
+# exit if a command exit with non-zero status
 set -e
 
-# Print each command before execution (optional for debugging)
-set -x
-
-# Define the project root and subdirectory containing the Python script
+# define the project root, the project subdirectory containing the python scripts
+# and the path of the requirements file
 PROJECT_ROOT=$(dirname "$0")
 SCRIPT_DIR="$PROJECT_ROOT/ETL_scripts"
 REQUIREMENTS_FILE="$PROJECT_ROOT/requirements.txt"
 
+# define the system variables used by the scripts to connect to mysql
 export HOST="localhost"
 export USERNAME="root"
 export PASSWORD="Sopas_de_aj8!"
 export DATABASE="Mira_Transfermarkt"
 
-# Step 1: Create a virtual environment
-# if [ ! -d "$PROJECT_ROOT/.venv" ]; then
+# create a virtual environment, by default recreate each time, to avoid
+# compatibility issues when running on different machines or locations
 python3 -m venv "$PROJECT_ROOT/.venv"
-# fi
 
-# Step 2: Activate the virtual environment
+# activate the virtual environment
 source "$PROJECT_ROOT/.venv/bin/activate"
 
-# Step 3: Install dependencies from requirements.txt
+# install dependencies from requirements.txt
 pip install --upgrade pip
 pip install -r "$REQUIREMENTS_FILE"
 
-# Step 4: Run the Python script from the subdirectory
+# run the python scripts
 python "$SCRIPT_DIR/CreateDB.py"
 python "$SCRIPT_DIR/CreateTables.py"
 python "$SCRIPT_DIR/ETL.py"
 
-# Step 5: Deactivate the virtual environment
-deactivate
+# deactivate the virtual environment
+# deactivate
