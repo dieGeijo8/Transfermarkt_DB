@@ -15,9 +15,13 @@ export USERNAME="root"
 export PASSWORD="Sopas_de_aj8!"
 export DATABASE="Mira_Transfermarkt"
 
-# create a virtual environment, by default recreate each time, to avoid
-# compatibility issues when running on different machines or locations
-python3 -m venv "$PROJECT_ROOT/.venv"
+# create a virtual environment when it doesn't exist
+if [ ! -d "$PROJECT_ROOT/.venv" ]; then
+    echo "Creating virtual environment..."
+    python3 -m venv "$PROJECT_ROOT/.venv"
+else
+    echo "Virtual environment already exists."
+fi
 
 # activate the virtual environment
 source "$PROJECT_ROOT/.venv/bin/activate"
@@ -25,6 +29,8 @@ source "$PROJECT_ROOT/.venv/bin/activate"
 # install dependencies from requirements.txt
 pip install --upgrade pip
 pip install -r "$REQUIREMENTS_FILE"
+
+echo "Virtual environment setup and dependencies installed successfully."
 
 # run the python scripts
 python "$SCRIPT_DIR/CreateDB.py"

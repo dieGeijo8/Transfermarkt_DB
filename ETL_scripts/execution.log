@@ -70,3 +70,17 @@
 2025-01-01 11:00:34,745 - INFO - 0 records inserted successfully in market values table.
 2025-01-01 11:00:34,748 - INFO - 0 records inserted successfully in injuries table.
 2025-01-01 11:00:34,748 - INFO - All data inserted successfully, transaction committed.
+2025-01-01 12:10:29,253 - INFO - Connected to MySQL server
+2025-01-01 12:10:29,258 - INFO - Database 'Mira_Transfermarkt' created or already exists.
+2025-01-01 12:10:29,345 - INFO - Table 'teams_table' created successfully.
+2025-01-01 12:10:29,347 - INFO - Table 'transfers_table' created successfully.
+2025-01-01 12:10:29,350 - INFO - Table 'players_table' created successfully.
+2025-01-01 12:10:29,353 - INFO - Table 'market_values_table' created successfully.
+2025-01-01 12:10:29,355 - INFO - Table 'injuries table' created successfully.
+2025-01-01 12:10:29,355 - INFO - All tables created successfully, transaction committed.
+2025-01-01 12:11:50,462 - INFO - 0 records inserted successfully in teams table.
+2025-01-01 12:11:50,478 - INFO - 0 records inserted successfully in transfers table.
+2025-01-01 12:11:50,483 - INFO - 0 records inserted successfully in players table.
+2025-01-01 12:11:50,489 - INFO - 0 records inserted successfully in market values table.
+2025-01-01 12:11:50,490 - INFO - 0 records inserted successfully in injuries table.
+2025-01-01 12:11:50,490 - INFO - All data inserted successfully, transaction committed.
