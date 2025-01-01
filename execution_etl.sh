@@ -31,5 +31,5 @@ python "$SCRIPT_DIR/CreateDB.py"
 python "$SCRIPT_DIR/CreateTables.py"
 python "$SCRIPT_DIR/ETL.py"
 
-# deactivate the virtual environment
+# deactivate the virtual environment - uncomment if you don't want to run anything after this script
 # deactivate
