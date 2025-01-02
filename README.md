@@ -20,7 +20,7 @@ Run the following command from the terminal or command prompt:
    ```bash
    git clone https://github.com/dieGeijo8/Transfermarkt_DB_WSL
    ```
-You might need to adjust line endings in the `execution_etl.sh` script by running:
+You might need to adjust line endings format in the `execution_etl.sh` script by running:
    ```bash
    dos2unix execution_etl.sh
    ```
