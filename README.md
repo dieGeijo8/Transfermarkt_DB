@@ -15,8 +15,8 @@ The `execution_etl.sh` Bash script will:
 ![My Image](DBschema.png)
 
 ## How to run 
-### 0. 
-Clone the repository
+### 0. Clone the repository
+Run the following command from the terminal or command prompt: 
    ```bash
    git clone https://github.com/dieGeijo8/Transfermarkt_DB_WSL
    ```
