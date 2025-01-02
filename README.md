@@ -1,4 +1,4 @@
-# Mira_Transfermarkt_WSL
+# Transfermarkt_DB_WSL
 
 This project has been developed using the Windows Subsystem for Linux (WSL).  
 To run this project, make sure that Python 3.x is installed on your system 
