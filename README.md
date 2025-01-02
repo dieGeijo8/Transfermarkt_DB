@@ -20,9 +20,12 @@ Run the following command from the terminal or command prompt:
    ```bash
    git clone https://github.com/dieGeijo8/Transfermarkt_DB_WSL
    ```
-
+You might need to adjust line endings in the `execution_etl.sh` script by running:
+   ```bash
+   dos2unix execution_etl.sh
+   ```
 ### 1. Set System Variables  
-   Open the file `execution_etl.sh` and define the system variables required to connect to MySQL:  
+   Open the `execution_etl.sh` script and define the system variables required to connect to MySQL:  
    - `host`: MySQL host (e.g., `localhost`).  
    - `username`: MySQL username.  
    - `password`: MySQL password.  
