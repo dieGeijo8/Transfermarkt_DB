@@ -1,1 +1,82 @@
 
+2025-01-03 11:27:19,505 - ERROR - Error creating the Database: 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+2025-01-03 11:27:19,571 - ERROR - Error in the connection with the DB: 1045 (28000): Access denied for user 'root'@'localhost' (using password: NO)
+2025-01-03 11:27:47,798 - INFO - Connected to MySQL server
+2025-01-03 11:27:47,814 - INFO - Database 'Mira_tris' created or already exists.
+2025-01-03 11:27:47,913 - INFO - Table 'teams_table' created successfully.
+2025-01-03 11:27:47,943 - INFO - Table 'transfers_table' created successfully.
+2025-01-03 11:27:47,977 - INFO - Table 'players_table' created successfully.
+2025-01-03 11:27:48,007 - INFO - Table 'market_values_table' created successfully.
+2025-01-03 11:27:48,037 - INFO - Table 'injuries_table' created successfully.
+2025-01-03 11:27:48,037 - INFO - All tables created successfully, transaction committed.
+2025-01-03 11:28:54,024 - INFO - 20 new records inserted successfully into the teams table.
+2025-01-03 11:28:54,045 - INFO - 829 new records inserted successfully into the players table.
+2025-01-03 11:28:54,107 - INFO - 1241 new records inserted successfully in transfers table.
+2025-01-03 11:28:54,127 - INFO - 829 new records inserted successfully into the market values table.
+2025-01-03 11:28:54,129 - INFO - 17 new records inserted successfully into the injuries table.
+2025-01-03 11:28:54,137 - INFO - All data inserted successfully, transaction committed.
+2025-01-03 11:29:07,921 - INFO - Connected to MySQL server
+2025-01-03 11:29:07,930 - INFO - Database 'Mira_tris' created or already exists.
+2025-01-03 11:29:08,005 - INFO - Table 'teams_table' created successfully.
+2025-01-03 11:29:08,008 - INFO - Table 'transfers_table' created successfully.
+2025-01-03 11:29:08,011 - INFO - Table 'players_table' created successfully.
+2025-01-03 11:29:08,014 - INFO - Table 'market_values_table' created successfully.
+2025-01-03 11:29:08,016 - INFO - Table 'injuries_table' created successfully.
+2025-01-03 11:29:08,016 - INFO - All tables created successfully, transaction committed.
+2025-01-03 11:29:57,977 - INFO - 0 new records inserted successfully into the teams table.
+2025-01-03 11:29:57,979 - INFO - 0 new records inserted successfully into the players table.
+2025-01-03 11:29:57,983 - INFO - 0 new records inserted successfully in transfers table.
+2025-01-03 11:29:57,985 - INFO - 0 new records inserted successfully into the market values table.
+2025-01-03 11:29:57,986 - ERROR - Error writing data in the DB, transaction rolled back: 1062 (23000): Duplicate entry '42205-2024-03-23-2024-04-01' for key 'injuries_table.PRIMARY'
+2025-01-03 11:34:50,643 - INFO - Connected to MySQL server
+2025-01-03 11:34:50,649 - INFO - Database 'Mira_tris' created or already exists.
+2025-01-03 11:34:50,733 - INFO - Table 'teams_table' created successfully.
+2025-01-03 11:34:50,737 - INFO - Table 'transfers_table' created successfully.
+2025-01-03 11:34:50,741 - INFO - Table 'players_table' created successfully.
+2025-01-03 11:34:50,743 - INFO - Table 'market_values_table' created successfully.
+2025-01-03 11:34:50,746 - INFO - Table 'injuries_table' created successfully.
+2025-01-03 11:34:50,746 - INFO - All tables created successfully, transaction committed.
+2025-01-03 11:35:48,160 - INFO - 0 new records inserted successfully into the teams table.
+2025-01-03 11:35:48,162 - INFO - 0 new records inserted successfully into the players table.
+2025-01-03 11:35:48,167 - INFO - 0 new records inserted successfully in transfers table.
+2025-01-03 11:35:48,169 - INFO - 0 new records inserted successfully into the market values table.
+2025-01-03 11:35:48,171 - ERROR - Error writing data in the DB, transaction rolled back: 1062 (23000): Duplicate entry '42205-2024-03-23-2024-04-01' for key 'injuries_table.PRIMARY'
+2025-01-03 11:36:24,687 - INFO - Connected to MySQL server
+2025-01-03 11:36:24,692 - INFO - Database 'Mira_tris' created or already exists.
+2025-01-03 11:36:24,768 - INFO - Table 'teams_table' created successfully.
+2025-01-03 11:36:24,773 - INFO - Table 'transfers_table' created successfully.
+2025-01-03 11:36:24,777 - INFO - Table 'players_table' created successfully.
+2025-01-03 11:36:24,780 - INFO - Table 'market_values_table' created successfully.
+2025-01-03 11:36:24,783 - INFO - Table 'injuries_table' created successfully.
+2025-01-03 11:36:24,783 - INFO - All tables created successfully, transaction committed.
+2025-01-03 11:37:23,644 - INFO - 0 new records inserted successfully into the teams table.
+2025-01-03 11:37:23,646 - INFO - 0 new records inserted successfully into the players table.
+2025-01-03 11:37:23,650 - INFO - 0 new records inserted successfully in transfers table.
+2025-01-03 11:37:23,652 - INFO - 0 new records inserted successfully into the market values table.
+2025-01-03 11:37:23,654 - ERROR - Error writing data in the DB, transaction rolled back: 1062 (23000): Duplicate entry '42205-2024-03-23-2024-04-01' for key 'injuries_table.PRIMARY'
+2025-01-03 11:42:27,646 - INFO - Connected to MySQL server
+2025-01-03 11:42:27,651 - INFO - Database 'Mira_tris' created or already exists.
+2025-01-03 11:42:27,729 - INFO - Table 'teams_table' created successfully.
+2025-01-03 11:42:27,732 - INFO - Table 'transfers_table' created successfully.
+2025-01-03 11:42:27,735 - INFO - Table 'players_table' created successfully.
+2025-01-03 11:42:27,737 - INFO - Table 'market_values_table' created successfully.
+2025-01-03 11:42:27,740 - INFO - Table 'injuries_table' created successfully.
+2025-01-03 11:42:27,740 - INFO - All tables created successfully, transaction committed.
+2025-01-03 11:43:26,794 - INFO - 0 new records inserted successfully into the teams table.
+2025-01-03 11:43:26,796 - INFO - 0 new records inserted successfully into the players table.
+2025-01-03 11:43:26,800 - INFO - 0 new records inserted successfully in transfers table.
+2025-01-03 11:43:26,802 - INFO - 0 new records inserted successfully into the market values table.
+2025-01-03 11:50:12,413 - INFO - Connected to MySQL server
+2025-01-03 11:50:12,418 - INFO - Database 'Mira_tris' created or already exists.
+2025-01-03 11:50:12,509 - INFO - Table 'teams_table' created successfully.
+2025-01-03 11:50:12,513 - INFO - Table 'transfers_table' created successfully.
+2025-01-03 11:50:12,517 - INFO - Table 'players_table' created successfully.
+2025-01-03 11:50:12,521 - INFO - Table 'market_values_table' created successfully.
+2025-01-03 11:50:12,524 - INFO - Table 'injuries_table' created successfully.
+2025-01-03 11:50:12,524 - INFO - All tables created successfully, transaction committed.
+2025-01-03 11:51:12,547 - INFO - 0 records inserted successfully in teams table.
+2025-01-03 11:51:12,559 - INFO - 0 records inserted successfully in transfers table.
+2025-01-03 11:51:12,563 - INFO - 0 records inserted successfully in players table.
+2025-01-03 11:51:12,569 - INFO - 0 records inserted successfully in market values table.
+2025-01-03 11:51:12,570 - INFO - 0 records inserted successfully in injuries table.
+2025-01-03 11:51:12,570 - INFO - All data inserted successfully, transaction committed.

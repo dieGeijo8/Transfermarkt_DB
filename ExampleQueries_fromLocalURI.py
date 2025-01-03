@@ -4,8 +4,8 @@ import os
 
 host = 'localhost'
 username = 'root'
-password = ''
-database = ''
+password = 'Sopas_de_aj8!'
+database = 'Mira_tris'
 
 DATABASE_URI = "mysql+pymysql://{}:{}@{}:3306/{}".format(username, password, host, database)
 engine = create_engine(DATABASE_URI)

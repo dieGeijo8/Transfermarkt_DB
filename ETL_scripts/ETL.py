@@ -341,145 +341,64 @@ try:
     # Start a transaction - either data is written in all tables or no data is written
     connection.start_transaction()
 
-    # Fetch existing Team_IDs
-    cursor.execute("SELECT Team_ID FROM teams_table")
-    existing_team_ids = {row[0] for row in cursor.fetchall()}
+    insert_query = """
+    INSERT IGNORE INTO teams_table (Team_ID, Team_name)
+    VALUES (%s, %s)
+    """
 
-    # Filter out records with existing Team_IDs
-    new_records = [
-        (row.Team_ID, row.Team_name)
-        for row in teams_table.itertuples(index=False, name='Row')
-        if row.Team_ID not in existing_team_ids
-    ]
+    records = list(teams_table.itertuples(index=False, name=None))
 
-    # Insert only new records
-    if new_records:
-        insert_query = """
-            INSERT INTO teams_table (Team_ID, Team_name)
-            VALUES (%s, %s)
-        """
-        cursor.executemany(insert_query, new_records)
+    cursor.executemany(insert_query, records)
 
-    logging.info(f"{len(new_records)} new records inserted successfully into the teams table.")
+    logging.info(f"{cursor.rowcount} records inserted successfully in teams table.")
 
-    # Fetch existing Player_ID and Team_ID combinations from the database
-    cursor.execute("""
-        SELECT Team_ID, Player_ID 
-        FROM players_table
-    """)
-    existing_players = {
-        (row[0], row[1]) for row in cursor.fetchall()
-    }
+    insert_query = """
+                INSERT IGNORE INTO transfers_table (
+                    Player_ID, Player_Name, Acquiring_team_ID, Acquiring_team_name, 
+                    Selling_team_ID, Selling_team_name, Price, Description
+                ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
+                """
 
-    # Filter out records that already exist in the database
-    new_records = [
-        (row.Team_ID, row.Player_ID, row.Player_name)
-        for row in players_table.itertuples(index=False, name='Row')
-        if (row.Team_ID, row.Player_ID) not in existing_players
-    ]
+    # drop primary key duplicates - could happen cause the transfer in Transfermarkt is registered in both acquiring and selling team page
+    transfers_table = transfers_table.drop_duplicates(subset=['Player_ID', 'Acquiring_team_ID', 'Selling_team_ID'], keep='first')
+    records = list(transfers_table.itertuples(index=False, name=None))
 
-    # Insert only new records
-    if new_records:
-        insert_query = """
-            INSERT INTO players_table (Team_ID, Player_ID, Player_name)
-            VALUES (%s, %s, %s)
-        """
-        cursor.executemany(insert_query, new_records)
+    cursor.executemany(insert_query, records)
 
-    # Log the result
-    logging.info(f"{len(new_records)} new records inserted successfully into the players table.")
+    logging.info(f"{cursor.rowcount} records inserted successfully in transfers table.")
 
-    # Fetch existing Player_ID, Acquiring_team_ID, and Selling_team_ID from the database
-    cursor.execute("""
-        SELECT Player_ID, Acquiring_team_ID, Selling_team_ID 
-        FROM transfers_table
-    """)
-    existing_transfers = {
-        (row[0], row[1], row[2]) for row in cursor.fetchall()
-    }
+    insert_query = """
+    INSERT IGNORE INTO players_table (Team_ID, Player_ID, Player_name)
+    VALUES (%s, %s, %s)
+    """
 
-    # Drop duplicates in the incoming data
-    transfers_table = transfers_table.drop_duplicates(
-        subset=['Player_ID', 'Acquiring_team_ID', 'Selling_team_ID'], keep='first'
-    )
+    data_to_insert = list(players_table.itertuples(index=False, name=None))
 
-    # Filter out records that already exist in the database
-    new_records = [
-        (
-            row.Player_ID, row.Player_Name, row.Acquiring_team_ID, row.Acquiring_team_name,
-            row.Selling_team_ID, row.Selling_team_name, row.Price, row.Description
-        )
-        for row in transfers_table.itertuples(index=False, name='Row')
-        if (row.Player_ID, row.Acquiring_team_ID, row.Selling_team_ID) not in existing_transfers
-    ]
+    cursor.executemany(insert_query, data_to_insert)
 
-    # Insert only new records
-    if new_records:
-        insert_query = """
-            INSERT INTO transfers_table (
-                Player_ID, Player_Name, Acquiring_team_ID, Acquiring_team_name, 
-                Selling_team_ID, Selling_team_name, Price, Description
-            ) VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
-        """
-        cursor.executemany(insert_query, new_records)
+    logging.info(f"{cursor.rowcount} records inserted successfully in players table.")
 
-    # Log the result
-    logging.info(f"{len(new_records)} new records inserted successfully in transfers table.")
+    insert_query = """
+    INSERT IGNORE INTO market_values_table (Team_ID, Team_name, Player_ID, Player_Name, Market_value)
+    VALUES (%s, %s, %s, %s, %s)
+    """
 
-    # Fetch existing Team_ID and Player_ID combinations from the database
-    cursor.execute("""
-        SELECT Team_ID, Player_ID 
-        FROM market_values_table
-    """)
-    existing_market_values = {
-        (row[0], row[1]) for row in cursor.fetchall()
-    }
+    data_to_insert = list(market_values_table.itertuples(index=False, name=None))
 
-    # Filter out records that already exist in the database
-    new_records = [
-        (row.Team_ID, row.Team_name, row.Player_ID, row.Player_name, row.Market_value)
-        for row in market_values_table.itertuples(index=False, name='Row')
-        if (row.Team_ID, row.Player_ID) not in existing_market_values
-    ]
+    cursor.executemany(insert_query, data_to_insert)
 
-    # Insert only new records
-    if new_records:
-        insert_query = """
-            INSERT INTO market_values_table (Team_ID, Team_name, Player_ID, Player_name, Market_value)
-            VALUES (%s, %s, %s, %s, %s)
-        """
-        cursor.executemany(insert_query, new_records)
+    logging.info(f"{cursor.rowcount} records inserted successfully in market values table.")
 
-    # Log the result
-    logging.info(f"{len(new_records)} new records inserted successfully into the market values table.")
+    insert_query = """
+    INSERT IGNORE INTO injuries_table (Player_ID, Player_name, Injury, Start_date, End_date, Games_missed, Team_ID)
+    VALUES (%s, %s, %s, %s, %s, %s, %s)
+    """
 
-    # Fetch existing Player_ID and Team_ID combinations from the database
-    cursor.execute("""
-        SELECT Player_ID, Team_ID
-        FROM injuries_table
-    """)
-    existing_injuries = {
-        (row[0], row[1]) for row in cursor.fetchall()
-    }
+    data_to_insert = list(injuries_table.itertuples(index=False, name=None))
 
-    # Filter out records that already exist in the database
-    new_records = [
-        (row.Player_ID, row.Player_name, row.Injury, row.Start_date, row.End_date, row.Games_missed, row.Team_ID)
-        for row in injuries_table.itertuples(index=False, name='Row')
-        if (row.Player_ID, row.Team_ID) not in existing_injuries
-    ]
+    cursor.executemany(insert_query, data_to_insert)
 
-    # Insert only new records
-    if new_records:
-        insert_query = """
-            INSERT INTO injuries_table (Player_ID, Player_name, Injury, Start_date, End_date, Games_missed, Team_ID)
-            VALUES (%s, %s, %s, %s, %s, %s, %s)
-        """
-        cursor.executemany(insert_query, new_records)
-
-    # Log the result
-    logging.info(f"{len(new_records)} new records inserted successfully into the injuries table.")
-
+    logging.info(f"{cursor.rowcount} records inserted successfully in injuries table.")
     # Commit the transaction
     connection.commit()
     logging.info("All data inserted successfully, transaction committed.")
@@ -488,3 +407,4 @@ except Error as e:
     # Rollback the transaction in case of error
     connection.rollback()
     logging.error(f"Error writing data in the DB, transaction rolled back: {e}")
+
