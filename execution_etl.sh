@@ -12,8 +12,8 @@ REQUIREMENTS_FILE="$PROJECT_ROOT/requirements.txt"
 # define the system variables used by the scripts to connect to mysql
 export HOST="localhost"
 export USERNAME="root"
-export PASSWORD=""
-export DATABASE=""
+export PASSWORD="Sopas_de_aj8!"
+export DATABASE="Mira_Transfermarkt_bis"
 
 # create a virtual environment when it doesn't exist
 if [ ! -d "$PROJECT_ROOT/.venv" ]; then

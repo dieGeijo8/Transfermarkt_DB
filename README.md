@@ -41,7 +41,8 @@ After the script completes, you may review the log file located at `ETL_scripts/
 
 ## Verify Data in the Tables
 To verify that data has been successfully inserted into all five tables, 
-run the following command from the terminal:   
+set in the `ExampleQueries_fromLocalURI.py` script the variables to connect to the MySQL database
+and run the following command from the terminal:   
    ```bash
    source .venv/bin/activate
    python ExampleQueries_fromLocalURI.py

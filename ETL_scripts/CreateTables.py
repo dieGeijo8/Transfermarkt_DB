@@ -102,7 +102,7 @@ try:
     );
     """
     cursor.execute(create_table_query)
-    logging.info("Table 'injuries table' created successfully.")
+    logging.info("Table 'injuries_table' created successfully.")
 
     # Commit the transaction
     connection.commit()
