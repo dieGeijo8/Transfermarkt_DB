@@ -15,9 +15,17 @@ The `execution_etl.sh` Bash script will:
 ![My Image](DBschema.png)
 
 ## How to run 
-
+### 0. Clone the repository
+Run the following command from the terminal or command prompt: 
+   ```bash
+   git clone https://github.com/dieGeijo8/Transfermarkt_DB_WSL
+   ```
+You might need to adjust line endings format in the `execution_etl.sh` script by running:
+   ```bash
+   dos2unix execution_etl.sh
+   ```
 ### 1. Set System Variables  
-   Open the script and define the system variables required to connect to MySQL:  
+   Open the `execution_etl.sh` script and define the system variables required to connect to MySQL:  
    - `host`: MySQL host (e.g., `localhost`).  
    - `username`: MySQL username.  
    - `password`: MySQL password.  
@@ -35,6 +43,7 @@ After the script completes, you may review the log file located at `ETL_scripts/
 To verify that data has been successfully inserted into all five tables, 
 run the following command from the terminal:   
    ```bash
+   source .venv/bin/activate
    python ExampleQueries_fromLocalURI.py
    ``` 
 This script will print the first 10 rows from each table to the console.
